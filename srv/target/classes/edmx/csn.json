@@ -1,0 +1,70 @@
+{
+  "namespace": "my.tasks",
+  "definitions": {
+    "CatalogService": {
+      "@source": "cat-service.cds",
+      "kind": "service"
+    },
+    "CatalogService.Tasks": {
+      "kind": "entity",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.tasks.Tasks"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "priority": {
+          "type": "cds.String"
+        },
+        "duedate": {
+          "type": "cds.Date"
+        }
+      },
+      "$syntax": "projection",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false
+    },
+    "my.tasks.Tasks": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "priority": {
+          "type": "cds.String"
+        },
+        "duedate": {
+          "type": "cds.Date"
+        }
+      }
+    }
+  },
+  "$version": "1.0",
+  "meta": {
+    "creator": "CDS Compiler v1.46.6",
+    "flavor": "inferred"
+  }
+}

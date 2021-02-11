@@ -1,0 +1,8 @@
+{
+  "welcomeFile": "myTaskManager/",
+  "authenticationMethod": "none",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": []
+}

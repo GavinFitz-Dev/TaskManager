@@ -1,0 +1,8 @@
+COLUMN TABLE my_tasks_Tasks (
+  ID INTEGER NOT NULL,
+  title NVARCHAR(5000),
+  description NVARCHAR(5000),
+  priority NVARCHAR(5000),
+  duedate DATE,
+  PRIMARY KEY(ID)
+)

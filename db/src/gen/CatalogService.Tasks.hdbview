@@ -1,0 +1,7 @@
+VIEW CatalogService_Tasks AS SELECT
+  Tasks_0.ID,
+  Tasks_0.title,
+  Tasks_0.description,
+  Tasks_0.priority,
+  Tasks_0.duedate
+FROM my_tasks_Tasks AS Tasks_0

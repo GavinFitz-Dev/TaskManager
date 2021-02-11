@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "MY_TASKS_TASKS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "my.tasks.Tasks.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "TITLE",
+          "DESCRIPTION",
+          "PRIORITY",
+          "DUEDATE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "TITLE": "title",
+        "DESCRIPTION": "description",
+        "PRIORITY": "priority",
+        "DUEDATE": "duedate"
+      }
+    }
+  ]
+}
