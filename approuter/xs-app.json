@@ -4,5 +4,18 @@
   "logout": {
     "logoutEndpoint": "/do/logout"
   },
-  "routes": []
+  "routes": [
+    {
+      "source": "^/uimodule/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "service": "html5-apps-repo-rt"
+    },
+    {
+      "source": "^/odata/(.*)$",
+      "authenticationType": "none",
+      "destination": "TaskDest",
+      "csrfProtection": false
+    }
+  ]
 }

@@ -8,7 +8,17 @@
       "version": "1.0.0"
     },
     "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
+    "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+        "uri": "../odata/v4/CatalogService/",
+        "type": "OData",
+        "settings": {
+          "localUri": "/../odata/v4/CatalogService//metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -52,7 +62,14 @@
         "settings": {
           "bundleName": "my.TaskManager.i18n.i18n"
         }
-      }
+      },
+      "": {
+				"dataSource": "mainService",
+				"preload":true,
+				"settings": {
+					"synchronizationMode" : "None"
+				}
+			}
     },
     "resources": {
       "css": [
